@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 2일차</title>
+    <style>
+    #div01 .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        border-radius: 5%;
+    }
+
+    #div01 .shadow1 {
+        box-shadow: 5px 5px 3px gray;
+        margin:20px;
+    }
+
+    #div01 .shadow2 {
+        box-shadow: -5px -5px 13px 5px blue;
+        margin:20px;
+    }
+
+    #div02 .box {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        margin:20px;
+        border: 5px solid cadetblue;
+    }
+
+    #div02 > div .none {
+        border-style: none;
+        background-color: cadetblue;
+    }
+
+    #div02 .hidden {border-style: hidden;}
+    #div02 .solid {border-style: solid;}
+    #div02 .dotted {border-style: dotted;}
+    #div02 .dashed {border-style: dashed;}
+    #div02 .double {border-style: double;}
+    #div02 .groove {border-style: groove;}
+    #div02 .inset {border-style: inset;}
+    #div02 .outset {border-style: outset;}
+    #div02 .ridge {border-style: ridge;}
+
+    #div02 > div .width1 {border-width: 5px;}
+    #div02 > div .width2 {border-width: 5px 10px;}
+    #div02 > div .width3 {border-width: 5px 10px 15px;}
+    #div02 > div .width4 {border-width: 5px 10px 15px 20px;}
+
+    #div02 > div .color {
+        border-top-color:darkblue;
+        border-right-color:crimson;
+        border-left-color:yellowgreen;
+        border-bottom-color:blueviolet;
+    }
+
+    #div02 > div .border1 { border:5px solid black;}
+    #div02 > div .border2 { border-top:5px dotted royalblue;}
+    #div02 > div .border3 { border-right:5px dashed orangered;}
+    #div02 > div .border4 { border:5px double greenyellow;}
+    #div02 > div .border5 { border:5px ridge hotpink;}
+
+    #div03 > .box {
+        width:100px;
+        height:100px;
+        border:1px solid black;
+        margin: 10px;
+    }
+
+    #div03 > .circle1 {border-radius: 50%;}
+    #div03 > .circle2 {border-radius: 50%; width: 200px;}
+    #div03 > .circle3 {border-radius: 20px;}
+    #div03 > .circle4 {border-radius: 5px 10px 15px 20px;}
+
+    #div04 .box {
+        width: 100px;
+        height: 100px;
+        border:1px solid black;
+    }
+
+    #div04 .red {background-color: red;}
+    #div04 .green {background-color: green;}
+    #div04 .blue {background-color: blue;}
+    #div04 .orange {background-color: orange;}
+    #div04 .horizontal {display: inline-block;}
+
+    #div04 .margin1 {margin: 10px;}
+    #div04 .margin2 {margin: 10px 20px;}
+    #div04 .margin3 {margin: 20px 10px 40px 30px;}
+
+    #div04 .top {margin-top: 10px;}
+    #div04 .right {margin-right: 20px;}
+    #div04 .bottom {margin-bottom: 30px;}
+    #div04 .left {margin-left: 40px;}
+    #div04 .auto {margin: 0 auto;}
+
+    #div05 .box {
+        width: 200px;
+        height:200px
+        border : 2px solid black;
+    }
+
+    #div05 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #div05 .padding1 {padding:5px 10px 15px 20px;}
+    #div05 .padding2 {
+        padding-top:5px;
+        padding-right:10px;
+        padding-bottom: 15px;
+        padding-left:left 20px;
+    }
+
+    #div06 .box {
+        width: 200px;
+        height: 200px;
+        border : 1px solid black;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    #div06 .red {background-color: red;}
+    #div06 .green {background-color: yellowgreen;}
+    #div06 .blue {background-color: blue;}
+    /*공간 자체를 사라지게 함*/
+    #div06 .none{display: none;} 
+    /*숨겨만 놓고 계속 자리에 남아있다.*/
+    #div06 .none{visibility:hidden;}
+    #div06 .opacity{opacity:0.0;}
+
+    #div06 .block {
+        /* block 타입 : width, height와 같은 크기를 설정하는 속성이 사용 가능함, margin과 padding의 모든 방향 속성을 사용 가능함. */
+        display: block;
+    }
+
+    #div06 .inline {
+        /* inline 타입 : 해당 태그의 크기가 컨텐츠의 크기에 따라 달라짐.margin과 padding의 일부만 사용 가능. */
+        /* margin의 경우 좌우만 사용 가능, */
+        /* padding의 경우 좌우만 사용 가능. 억지로 키울 경우 다른 태그의 영역과 겹침. */
+        display: inline;
+    }
+
+    #div06 .inline-block {
+        /*  inlingl-zlick 타입은 inline 타입처럼 한 라인의 태그를 여러개의 태그를 사용할 수 있고, block 타입처럼  */
+        display: inline-block;
+        margin: 30px;
+        padding: 30px;
+    }
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <h3>box-shadow 사용하기</h3>
+        <div class="box shadow1"></div>
+        <div class="box shadow2"></div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div02">
+        <h3>border 사용하기</h3>
+        <div class="box none"></div>
+        <div class="box hidden"></div>
+        <div class="box solid"></div>
+        <div class="box dotted"></div>
+        <div class="box dashed"></div>
+        <div class="box double"></div>
+        <div class="box groove"></div>
+        <div class="box inset"></div>
+        <div class="box outset"></div>
+        <div class="box ridge"></div>
+
+        <br><hr><br>
+        <div>
+            <span class="box width1"></span>
+            <span class="box width2"></span>
+            <span class="box width3"></span>
+            <span class="box width4"></span>
+        </div>
+
+        <br><hr><br>
+
+        <div>
+            <h4>border-color</h4>
+            <span class="box color"></span>
+        </div>
+
+        <br><hr><br>
+        <div>
+            <span class="box border1"></span>
+            <span class="box border2"></span>
+            <span class="box border3"></span>
+            <span class="box border4"></span>
+            <span class="box border5"></span>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div03">
+        <h3>border-radius 사용하기</h3>
+        <div class="box circle1"></div>
+        <div class="box circle2"></div>
+        <div class="box circle3"></div>
+        <div class="box circle4"></div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div04">
+        <div>
+            <div class="box red margin1"></div>
+            <div class="box green margin2"></div>
+            <div class="box blue margin3"></div>
+
+        </div>
+        <div>
+            <div class="box horizontal red margin2"></div>
+            <div class="box horizontal green"></div>
+            <div class="box horizontal blue"></div>
+            <div class="box horizontal orange margin2"></div>
+        </div>
+
+        <div>
+            <h4>auto 사용 시</h4>
+            <div class="box auto orange"></div>
+        </div>
+    </div>
+
+    <div class="div05">
+        <h3>padding 사용하기</h3>
+        <div class="box padding1">
+            <img src="./002.jpg" alt="">
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div06">
+        <h3>display 사용하기</h3>
+        <div>
+            <h4>none</h4>
+            <div class="box red none"></div>
+            <div class="box green visibility "></div>
+            <div class="box blue visibility "></div>
+        </div>
+        <br>
+        <div>
+            <h4>block, inline</h4>
+            <div class="box inline">block 타입</div>
+            <div class="box inline">block 타입</div>
+            <div class="box inline">block 타입</div>
+
+            <span class="box block">inline 타입</span>
+            <span class="box block">inline 타입</span>
+            <span class="box block">inline 타입</span>
+            <br><br>
+
+            <div class="box inline-block">div 태그, inline block 타입</div>
+            <span class="box inline-block">span 태그, inline block 타입</span>
+        </div>
+    </div>
+</body>
+</html>

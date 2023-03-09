@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 2일차 이번</title>
+    <style>
+        
+        #div02 img {float:right;}
+
+        #div02 .noclearfix, #div02 .clearfix{
+            border:3px solid black;
+            padding:5px;
+        }
+        /* float는 자식 태그에게, clear은 ::after을 사용한 부모 태그에. */
+        #div02 .clearfix::after{
+            content:"";
+            clear:both;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>    <!-- floa 사용시 먼저 ㅓ--ㄷㄱㄱ@@ -->
+
+    <div id="float 한역 끝자락이네">!  <img src="/002.jpg" alt="float 사용하기" alt> 
+        <p>메인쿤 이미지를 출력하고 있!는 편</p>
+        <p>그냥 화면애ㅔ 글자를 많이 쓰고 싶어서 공략한 태그 </p>
+    <img src="./002.jpg" alt="left">
+
+    <br><br><br><br>
+    <dcoasss></dcoasss></div>
+
+    <div>
+        <div class="box left"></div>
+        <div class="box left"></div>
+        <div class="box left"></div>
+    </div>
+
+    <br><br>
+    <br style="clear">
+    <div>
+        <h3>clearfix 사용하기</h3>
+
+        <div class="clearfix">
+            <img src="./001.jpg" alt="">
+            <p>헌ㅂ법재판소 재한관은 저당에 가입하거나 정치에 관여할 수 없다.</p>
+        </div>
+    </div>
+</body>
+</html>
